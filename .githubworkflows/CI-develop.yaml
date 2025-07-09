@@ -1,0 +1,26 @@
+name: CI workflow for Develop Branch
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    environment: development-env
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Add any static analysis or validation steps here if needed
+
+      - name: Show directory contents
+        run: ls -la
+
+      - name: Finished
+        run: echo "CI workflow for develop branch completed."
