@@ -1,0 +1,24 @@
+name: CD workflow to Develop Environment
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    name: Deploy to Develop Environment
+    runs-on: ubuntu-latest
+    environment:
+      name: develop
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Add your deployment steps here, for example:
+      - name: Deploy to server
+        run: echo "Deploying static site to develop environment..."
+
+      - name: Finished
+        run: echo "CD workflow for develop branch completed."
