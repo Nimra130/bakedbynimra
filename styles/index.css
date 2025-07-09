@@ -1,0 +1,92 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #3e2723;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: #f7c59f;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 2px solid #e0a96d;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #8d5524;
+}
+
+/* Navigation */
+nav {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: #8d5524;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #d2691e;
+}
+
+/* Main content */
+main {
+    padding: 2rem 0;
+}
+
+/* Cards for products or gallery */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(141, 85, 36, 0.08);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(141, 85, 36, 0.16);
+}
+
+/* Footer */
+footer {
+    background: #f7c59f;
+    color: #8d5524;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 2px solid #e0a96d;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}
