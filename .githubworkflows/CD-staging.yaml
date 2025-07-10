@@ -1,0 +1,29 @@
+name: CD workflow to Staging
+
+on:
+  push:
+    branches:
+      - 'release/*'
+
+jobs:
+  deploy-staging:
+    runs-on: ubuntu-latest
+    environment: staging-env
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Add your build steps here, for example:
+      # - name: Install dependencies
+      #   run: npm install
+
+      # - name: Build project
+      #   run: npm run build
+
+      # Add your deployment steps here, for example:
+      # - name: Deploy to Staging
+      #   run: echo "Deploying to staging..."
+
+      - name: Notify deployment complete
+        run: echo "Deployment to staging-env complete."
